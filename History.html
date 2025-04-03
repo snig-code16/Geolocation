@@ -1,0 +1,97 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    $(function() {    
+        $('#input-search').on('keyup', function() {
+          var rex = new RegExp($(this).val(), 'i');
+            $('.searchable-container .items').hide();
+            $('.searchable-container .items').filter(function() {
+                return rex.test($(this).text());
+            }).show();
+        });
+    });
+	</script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+.glyphicon-lg
+{
+    font-size:4em
+}
+.info-block
+{
+    border-right:5px solid #E6E6E6;margin-bottom:25px
+}
+.info-block .square-box
+{
+    width:100px;min-height:110px;margin-right:22px;text-align:center!important;background-color: #20595E;padding:20px 0
+}
+.info-block.block-info
+{
+    border-color:#20819e
+}
+.info-block.block-info .square-box
+{
+    background-color:#20595E;color:#FFF
+}
+.logo{
+	float:left;
+	height:20px;
+	width:20px;
+	cursor:pointer;	
+}
+</style>
+<div class="container">
+	<div class="row"><a href="dashboard.html"><img class="logo" src="previous.png" ></a>
+		<h2>Attendance History</h2>
+        <div class="col-lg-12">
+            <input type="search" class="form-control" id="input-search" placeholder="Search dates..." >
+        </div>
+        <div class="searchable-container">
+            <div class="items col-xs-12 col-sm-6 col-md-6 col-lg-6 clearfix">
+               <div class="info-block block-info clearfix">
+                    <div class="square-box pull-left">
+                        <span class="glyphicon glyphicon-user glyphicon-lg"></span>
+                    </div>
+                    <h5>Date: 3/8/2024</h5>
+                    <span>Check-In Time:</span><br>
+                    <span>Check-Out Time:</span><br>
+                    <span>Total Time Present:</span>
+                </div>
+            </div>
+            <div class="items col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+               <div class="info-block block-info clearfix">
+                    <div class="square-box pull-left">
+                        <span class="glyphicon glyphicon-user glyphicon-lg"></span>
+                    </div>
+                   <h5>Date:</h5>
+                    <span>Check-In Time:</span><br>
+                    <span>Check-Out Time:</span><br>
+                    <span>Total Time Present:</span>
+                </div>
+            </div>
+            <div class="items col-xs-12 col-sm-12 col-md-6 col-lg-6">
+               <div class="info-block block-info clearfix">
+                    <div class="square-box pull-left">
+                        <span class="glyphicon glyphicon-user glyphicon-lg"></span>
+                    </div>
+                   <h5>Date:</h5>
+                    <span>Check-In Time:</span><br>
+                    <span>Check-Out Time:</span><br>
+                    <span>Total Time Present:</span>
+                </div>
+            </div>
+            <div class="items col-xs-12 col-sm-12 col-md-6 col-lg-6">
+               <div class="info-block block-info clearfix">
+                    <div class="square-box pull-left">
+                        <span class="glyphicon glyphicon-user glyphicon-lg"></span>
+                    </div>
+                    <h5>Date:</h5>
+                    <span>Check-In Time:</span><br>
+                    <span>Check-Out Time:</span><br>
+                    <span>Total Time Present:</span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
